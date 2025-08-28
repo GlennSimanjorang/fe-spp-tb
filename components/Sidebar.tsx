@@ -20,7 +20,7 @@ export function Sidebar({ activeItem, onItemClick }: SidebarProps) {
   return (
     <div className="w-64 bg-white border-r border-border h-screen flex flex-col">
       <div className="p-6">
-        <h1 className="text-xl font-medium text-foreground">Admin</h1>
+        <h1 className="text-xl font-medium text-gray-900">Admin</h1>
       </div>
       
       <nav className="flex-1 px-4">
@@ -34,7 +34,7 @@ export function Sidebar({ activeItem, onItemClick }: SidebarProps) {
                   className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-colors ${
                     activeItem === item.id
                       ? 'bg-blue-50 text-blue-600'
-                      : 'text-muted-foreground hover:bg-accent hover:text-foreground'
+                      : 'text-gray-500 hover:bg-accent hover:text-gray-900'
                   }`}
                 >
                   <Icon className="w-5 h-5" />

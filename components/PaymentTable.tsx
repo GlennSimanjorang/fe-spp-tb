@@ -37,9 +37,9 @@ export function PaymentTable() {
   return (
     <div className="bg-white rounded-lg border border-border">
       <div className="p-6 border-b border-border">
-        <h3 className="text-lg font-medium text-foreground mb-4">Pembayaran Baru</h3>
+        <h3 className="text-lg font-medium text-gray-900 mb-4">Pembayaran Baru</h3>
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
           <Input 
             placeholder="Cari Data Siswa" 
             className="pl-10 bg-input-background border-border"
@@ -51,19 +51,19 @@ export function PaymentTable() {
         <table className="w-full">
           <thead className="bg-muted/50 border-b border-border">
             <tr>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">
+              <th className="text-left p-4 text-sm font-medium text-gray-500">
                 <input type="checkbox" className="rounded border-border" />
               </th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Waktu</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">NIS</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Nama Siswa</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Kelas</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Periode</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Jumlah</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Metode</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Bukti</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Status</th>
-              <th className="text-left p-4 text-sm font-medium text-muted-foreground">Aksi</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Waktu</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">NIS</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Nama Siswa</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Kelas</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Periode</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Jumlah</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Metode</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Bukti</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Status</th>
+              <th className="text-left p-4 text-sm font-medium text-gray-500">Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -72,14 +72,14 @@ export function PaymentTable() {
                 <td className="p-4">
                   <input type="checkbox" className="rounded border-border" />
                 </td>
-                <td className="p-4 text-sm text-foreground">{record.waktu}</td>
-                <td className="p-4 text-sm text-foreground">{record.nis}</td>
-                <td className="p-4 text-sm text-foreground">{record.namaSiswa}</td>
-                <td className="p-4 text-sm text-foreground">{record.kelas}</td>
-                <td className="p-4 text-sm text-foreground">{record.periode}</td>
-                <td className="p-4 text-sm text-foreground">{record.jumlah}</td>
-                <td className="p-4 text-sm text-foreground">{record.metode}</td>
-                <td className="p-4 text-sm text-foreground">{record.bukti}</td>
+                <td className="p-4 text-sm text-gray-900">{record.waktu}</td>
+                <td className="p-4 text-sm text-gray-900">{record.nis}</td>
+                <td className="p-4 text-sm text-gray-900">{record.namaSiswa}</td>
+                <td className="p-4 text-sm text-gray-900">{record.kelas}</td>
+                <td className="p-4 text-sm text-gray-900">{record.periode}</td>
+                <td className="p-4 text-sm text-gray-900">{record.jumlah}</td>
+                <td className="p-4 text-sm text-gray-900">{record.metode}</td>
+                <td className="p-4 text-sm text-gray-900">{record.bukti}</td>
                 <td className="p-4">
                   <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 border-yellow-200">
                     {record.status}
@@ -101,7 +101,7 @@ export function PaymentTable() {
           <Button variant="ghost" size="sm" disabled>
             <ChevronLeft className="w-4 h-4" />
           </Button>
-          <span className="text-sm text-muted-foreground">1 2 3 4 5</span>
+          <span className="text-sm text-gray-500">1 2 3 4 5</span>
           <Button variant="ghost" size="sm">
             <ChevronRight className="w-4 h-4" />
           </Button>
