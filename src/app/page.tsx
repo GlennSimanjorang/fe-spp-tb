@@ -3,9 +3,20 @@
 import { useState } from "react";
 import { Sidebar } from "../../components/Sidebar";
 import { Dashboard } from "../../components/Dashboard";
-
+import { Login } from "../../components/login";
+ 
 export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeItem, setActiveItem] = useState('dashboard');
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setActiveItem('dashboard');
+  };
 
   const renderContent = () => {
     switch (activeItem) {
@@ -51,9 +62,19 @@ export default function App() {
     }
   };
 
+  
+  if (!isLoggedIn) {
+    return <Login onLogin={handleLogin} />;
+  }
+
+  
   return (
     <div className="min-h-screen bg-gray-50 flex">
-      <Sidebar activeItem={activeItem} onItemClick={setActiveItem} />
+      <Sidebar 
+        activeItem={activeItem} 
+        onItemClick={setActiveItem} 
+        onLogout={handleLogout}
+      />
       {renderContent()}
     </div>
   );
